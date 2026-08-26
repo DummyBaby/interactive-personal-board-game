@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f3eee4;
+  --bg-deep: #e7dccb;
+  --ink: #1c2430;
+  --ink-soft: #5a6573;
+  --path: #2f8f7a;
+  --path-dark: #1f6d5c;
+  --game: #e07a3d;
+  --game-deep: #c45c4a;
+  --about: #5b6abf;
+  --about-deep: #3f4d9a;
+  --card: #fffdf8;
+  --line: #d8cdbb;
+  --gold: #c9a227;
+  --start: #2f8f7a;
+  --finish: #c45c4a;
+}
+
+@theme inline {
+  --color-board-bg: var(--bg);
+  --color-board-deep: var(--bg-deep);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-path: var(--path);
+  --color-path-dark: var(--path-dark);
+  --color-game: var(--game);
+  --color-game-deep: var(--game-deep);
+  --color-about: var(--about);
+  --color-about-deep: var(--about-deep);
+  --color-card: var(--card);
+  --color-line: var(--line);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-nunito);
+  --font-display: var(--font-fraunces);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(1200px 700px at 10% -10%, rgba(47, 143, 122, 0.08), transparent 50%),
+    radial-gradient(900px 500px at 110% 10%, rgba(224, 122, 61, 0.08), transparent 45%),
+    var(--bg);
+  color: var(--ink);
+  font-family: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), ui-serif, Georgia, serif;
+}
+
+.board-texture {
+  background-image:
+    radial-gradient(rgba(28, 36, 48, 0.035) 0.7px, transparent 0.7px);
+  background-size: 7px 7px;
+}
+
+.focus-ring:focus-visible {
+  outline: 3px solid rgba(47, 143, 122, 0.55);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+}

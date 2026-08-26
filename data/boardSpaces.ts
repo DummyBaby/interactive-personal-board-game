@@ -1,0 +1,98 @@
+import type { BoardSpace } from "@/types/game";
+
+export const boardSpaces: BoardSpace[] = [
+  {
+    id: 1,
+    title: "Défi quiz",
+    category: "game",
+    type: "quiz",
+    description: "Un quiz sur la France.",
+    prompt: "Voyons si tu connais un peu la France.",
+    maxScore: 100,
+  },
+  {
+    id: 2,
+    title: "Mon école",
+    category: "about",
+    type: "school",
+    description: "Un petit aperçu de mon univers scolaire.",
+    prompt: "Découvre mon école.",
+    maxScore: 0,
+  },
+  {
+    id: 3,
+    title: "Mon hobby",
+    category: "game",
+    type: "hobby",
+    description: "Devine mon hobby grâce aux indices.",
+    prompt: "Je te donne des indices. À toi de trouver.",
+    maxScore: 100,
+  },
+  {
+    id: 4,
+    title: "Mémoire",
+    category: "game",
+    type: "memory",
+    description: "Observe bien, puis dis ce que tu as vu.",
+    prompt: "Ouvre l’œil — ça disparaît vite.",
+    maxScore: 150,
+  },
+  {
+    id: 5,
+    title: "Mon parcours",
+    category: "about",
+    type: "journey",
+    description: "Les étapes qui m’ont mené jusqu’ici.",
+    prompt: "Un regard sur mon parcours.",
+    maxScore: 0,
+  },
+  {
+    id: 6,
+    title: "Tu préfères",
+    category: "game",
+    type: "wouldYouRather",
+    description: "Devine mes choix et un peu de ma personnalité.",
+    prompt: "Qu’est-ce que je choisirais vraiment ?",
+    maxScore: 100,
+  },
+  {
+    id: 7,
+    title: "Ma fierté",
+    category: "about",
+    type: "achievement",
+    description: "Un moment dont je suis fier.",
+    prompt: "Une petite histoire, pas un trophée.",
+    maxScore: 0,
+  },
+  {
+    id: 8,
+    title: "Mes passions",
+    category: "about",
+    type: "passions",
+    description: "Ce qui m’anime, tout simplement.",
+    prompt: "Découvre ce qui m’allume.",
+    maxScore: 0,
+  },
+  {
+    id: 9,
+    title: "Quiz final",
+    category: "game",
+    type: "finalQuiz",
+    description: "Le défi de culture française un peu plus corsé.",
+    prompt: "Tu as fait du chemin. Voyons ce qui reste.",
+    maxScore: 250,
+  },
+  {
+    id: 10,
+    title: "Mystère",
+    category: "game",
+    type: "mystery",
+    description: "Un défi chrono de 30 secondes.",
+    prompt: "Dernière surprise. Réfléchis vite.",
+    maxScore: 300,
+  },
+];
+
+export function spaceById(id: number): BoardSpace | undefined {
+  return boardSpaces.find((space) => space.id === id);
+}
