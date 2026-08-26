@@ -17,7 +17,7 @@ export function GameApp() {
 
   useEffect(() => {
     let cancelled = false;
-    void useGameStore.persist.rehydrate().then(() => {
+    void Promise.resolve(useGameStore.persist.rehydrate()).then(() => {
       if (!cancelled) setReady(true);
     });
     return () => {
